@@ -59,7 +59,7 @@ These scripts could take about an hour, or more.
 
 ### 3. deactivate the current environment and activate again.
 
-```
+```bash
 conda deactivate densepose
 conda activate densepose
 ```
@@ -67,7 +67,7 @@ This is because `4_build_gcc492.sh` adds some more environment variables. You ne
 
 ### 4. build protobuf-3.5.0 and cocoapi; install pytorch-1.0.0
 
-```
+```bash
 sh 5_build_protobuf.sh
 sh 6_build_cocoapi.sh
 sh 7_install_pytorch.sh
