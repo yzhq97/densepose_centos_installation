@@ -48,19 +48,32 @@ You can just run `sh 1_create_conda_environment.sh`. It will create an environme
 
 after this, activate the environment: `conda activate densepose` (if the name of your environment is `densepose`)
 
-### 2. install dependencies; build gcc-4.9.2, protobuf-3.5.0 and cocoapi; install pytorch-1.0.0
+### 2. install dependencies; build gcc-4.9.2, 
 
 ```bash
 sh 2_download_resources.sh
 sh 3_install_dependencies.sh
 sh 4_build_gcc492.sh
+```
+
+### 3. deactivate the current environment and activate again
+
+```
+conda deactivate densepose
+conda activate densepose
+```
+This is because `4_build_gcc492.sh` adds some more environment variables. You need to reactivate the environment for those changes to take effect.
+
+### 4. build protobuf-3.5.0 and cocoapi; install pytorch-1.0.0
+
+```
 sh 5_build_protobuf.sh
 sh 6_build_cocoapi.sh
 sh 7_install_pytorch.sh
 ```
 These scripts could take about an hour, or more.
 
-### 3. test your pytorch and Caffe2 installation
+### 5. test your pytorch and Caffe2 installation
 
 ```bash
 sh 8_test_caffe2_import.sh
@@ -71,7 +84,7 @@ Success
 4 # depends on the number of gpus in your system
 ```
 
-### 4. build detectron and test
+### 6. build detectron and test
 
 ```bash
 sh 9_build_detecron.sh

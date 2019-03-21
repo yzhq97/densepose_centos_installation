@@ -1,11 +1,9 @@
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
-# manually set these vars
-set(HOME_DIR "/mnt/lustre/yangzhuoqian")
-set(CONDA_ENV_NAME "densepose")
+# manually set the path to your anaconda environment
+set(CONDA_ENV_DIR "${HOME_DIR}/anaconda3/envs/${CONDA_ENV_NAME}")
 
 # set Caffe2_DIR
-set(CONDA_ENV_DIR "${HOME_DIR}/anaconda3/envs/${CONDA_ENV_NAME}")
 set(TORCH_DIR "${CONDA_ENV_DIR}/lib/python2.7/site-packages/torch")
 set(Caffe2_DIR "${TORCH_DIR}/share/cmake/Caffe2")
 # set cuDNN path
