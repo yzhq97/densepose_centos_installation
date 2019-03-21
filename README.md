@@ -102,7 +102,7 @@ Ran 3 tests in 8.237s
 OK
 ```
 
-### 5. build ops and test
+### 7. build ops and test
 
 ```bash
 sh 11_build_ops.sh
