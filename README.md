@@ -10,9 +10,9 @@
 
 You will fail if you follow the official [installation guide](https://github.com/facebookresearch/DensePose/blob/master/INSTALL.md). The problems are that:
 
-* Although it is stated on the official `Caffe2` [installation guide](https://caffe2.ai/docs/getting-started.html?platform=mac&configuration=prebuilt) that simply running `conda install pytorch-nightly -c pytorch` "will install Caffe2 and _all of its required dependencies_ into the current conda environment", it won't. 
-* `DensePose` uses some customized operations that needs to be manually compiled. However, the `Caffe2` you installed from `Anaconda` (with pytorch 1.0.0) was originally built with `gcc-4.9.2` and `protobuf-3.5.0`. You need to compile the customized operations with `gcc-4.9.2` and `protobuf-3.5.0`, otherwise they won't work.
-* `gcc-4.9.2` and `protobuf-3.5.0` are not available from `Anaconda`.
+* Although it is stated in the official `Caffe2` [installation guide](https://caffe2.ai/docs/getting-started.html?platform=mac&configuration=prebuilt) that simply running `conda install pytorch-nightly -c pytorch` "will install Caffe2 and _all of its required dependencies_ into the current conda environment", it won't. 
+* `DensePose` uses some customized operations that need to be manually compiled. You need to compile them with `gcc-4.9.2` and `protobuf-3.5.0`, otherwise they won't work. This is because the `Caffe2` you installed from `Anaconda` (together with pytorch 1.0.0) was originally built with `gcc-4.9.2` and `protobuf-3.5.0`. You must match the specific versions, otherwise they won't work together.
+* Sadly, `gcc-4.9.2` and `protobuf-3.5.0` are not available from `Anaconda`.
 
 ## Environment
 
