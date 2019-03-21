@@ -48,15 +48,16 @@ You can just run `sh 1_create_conda_environment.sh`. It will create an environme
 
 after this, activate the environment: `conda activate densepose` (if the name of your environment is `densepose`)
 
-### 2. install dependencies; build gcc-4.9.2, 
+### 2. install dependencies; build gcc-4.9.2.
 
 ```bash
 sh 2_download_resources.sh
 sh 3_install_dependencies.sh
 sh 4_build_gcc492.sh
 ```
+These scripts could take about an hour, or more.
 
-### 3. deactivate the current environment and activate again
+### 3. deactivate the current environment and activate again.
 
 ```
 conda deactivate densepose
@@ -71,7 +72,6 @@ sh 5_build_protobuf.sh
 sh 6_build_cocoapi.sh
 sh 7_install_pytorch.sh
 ```
-These scripts could take about an hour, or more.
 
 ### 5. test your pytorch and Caffe2 installation
 
