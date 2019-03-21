@@ -29,6 +29,11 @@ My environment:
 
 ### 0. set up some variables
 
+clone this repository
+```
+https://github.com/yzhq97/densepose_centos_installation.git
+```
+
 In `0_set_variables.sh`, you need to specify the anaconda environment name and where you would like to install `DensePose`. It's okay to use default values. It installs `DensePose` under your `$HOME/densepose` by default.
 
 ```bash
